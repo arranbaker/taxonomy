@@ -1,0 +1,88 @@
+.contact-container {
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    background: white;
+    color: $main-color;
+
+    .contact-header {
+        margin-left: 20%;
+        padding-top: 15vh;
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .close-button-container {
+        border-radius: 20px;
+        border: 2px solid $main-color;
+        display: grid;
+        place-items: center;
+        height: auto;
+        p {
+            font-weight: bold;
+            font-family: $main-font;
+            margin: 0;
+            padding: 0.4rem 2rem 0.3rem;
+            text-align: center;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $second-color;
+            background: linear-gradient(to right, white 50%, $main-color 50%);
+            background-size: 201% 100%;
+            background-position: right bottom;
+            transition: all .6s ease-out;
+        }
+    }
+
+    .contact-form-container {
+        margin-left: 30%;
+        width: 30%;
+        padding-bottom: 10vh;
+        
+
+        h3 {
+            font-size: 3rem;
+            font-family: $main-font;
+            margin: 0;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.5rem;
+            width: 30vw;
+            
+            input, textarea {
+                margin: 1rem 0;
+                border: none;
+                border-bottom: 2px solid $main-color;
+                outline: none;
+            }
+
+            textarea {
+                resize: vertical;
+                max-height: 300px;
+            }
+
+            button {
+                width: 30%;
+                margin: 0 auto;
+                background: white;
+                border: 2px solid $main-color;
+                border-radius: 5px;
+                margin-top: 1rem;
+                font-size: 0.8rem;
+                padding: 0.5rem;
+
+                &:hover {
+                    color: $second-color;
+                    background: $main-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

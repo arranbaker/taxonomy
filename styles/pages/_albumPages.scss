@@ -1,0 +1,118 @@
+.album-page-container {
+    position: relative;
+    background: $second-color;
+    color: $main-color;
+
+    .album-header {
+        margin-left: 20%;
+        padding-top: 20vh;
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+        
+        .close-button-container {
+            border-radius: 20px;
+            border: 2px solid $main-color;
+            display: grid;
+            place-items: center;
+            height: 5vh;
+            transition: 0.4s;
+            
+            p {
+                font-weight: bold;
+                font-family: $main-font;
+                margin: 0;
+                padding: 0.5rem 2rem;
+                text-align: center;
+            }
+        
+            &:hover {
+                cursor: pointer;
+                color: $second-color;
+                background: linear-gradient(to right, transparent 50%, $main-color 50%);
+                background-size: 201% 100%;
+                background-position: right bottom;
+                transition: all .6s ease-out;
+            }
+        }
+    }
+
+    .album-title {
+        font-size: 5rem;
+        margin-left: 20%;
+        margin-top: 4rem;
+        margin-bottom: 0;
+        font-family: $main-font;
+    }
+
+    .album-info {
+        margin-left: 20%;
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+    }
+
+    .album-content-container {
+        padding-top: 5%;
+        margin-left: 20%;
+        padding-bottom: 5vh;
+
+        .miraflores-img-1 {
+            height: 60vh;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 2.5rem;
+            margin-top: 8%;
+            font-family: $main-font;
+            width: 50%;
+            margin-left: 5%;
+        }
+    }
+
+    .miraflores-scroll-container {
+        position: sticky;
+        top: 0;
+        height: auto;
+        width: 85vw;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: space-between;
+        padding-bottom: 10vh;
+
+        .album-image {
+            width: 40vw;
+            margin: 2.5% 0;
+        }
+
+        ul {
+            font-size: 2rem;
+            list-style-type: none;
+            font-weight: bolder;
+        }
+    }
+
+    .ecuador-video-container {
+        position: relative;
+        width: 100vw;
+        margin-left: -10%;
+        display: grid;
+        place-items: center;
+        margin-top: 10vh;
+
+        video {
+            width: 102vw;
+        }
+
+        h3 {
+            position: absolute;
+            top: 50;
+            font-size: 20rem;
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+        }
+    }
+}
+

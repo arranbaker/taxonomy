@@ -1,0 +1,49 @@
+.about-container {
+    .about-header {
+        margin-left: 20%;
+        margin-top: 15vh;
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .close-button-container {
+        border-radius: 20px;
+        border: 2px solid $main-color;
+        display: grid;
+        place-items: center;
+        height: auto;
+        p {
+            font-weight: bold;
+            font-family: $main-font;
+            margin: 0;
+            padding: 0.4rem 2rem 0.3rem;
+            text-align: center;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $second-color;
+            background: linear-gradient(to right, white 50%, $main-color 50%);
+            background-size: 201% 100%;
+            background-position: right bottom;
+            transition: all .6s ease-out;
+        }
+    }
+
+    .about-text-container {
+        margin-left: 30%;
+        width: 30%;
+
+        h3 {
+            font-size: 3rem;
+            font-family: $main-font;
+            margin: 0;
+        }
+    
+        p {
+
+            margin-top: 10vh;
+        }
+    }
+}

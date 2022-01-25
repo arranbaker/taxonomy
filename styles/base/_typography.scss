@@ -1,0 +1,22 @@
+@font-face {
+    font-family: maglio;
+    src: url(../../public/fonts/MagilioRegular-Yzv2O.ttf);
+}
+
+@font-face {
+    font-family: harmony;
+    src: url(../../public/fonts/Harmony.otf); 
+}
+
+@font-face {
+    font-family: work;
+    src: url(../../public/fonts/WorkSans.ttf);
+}
+
+$main-font: maglio;
+$second-font: harmony;
+$third-font: work;
+
+body {
+    font-family: $second-font;
+}

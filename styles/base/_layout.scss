@@ -1,0 +1,12 @@
+$main-color: darken(#606c38, 3%);
+$second-color: #dbbd4e;
+
+body {
+    background: white;
+    overflow-x: hidden;
+    color: $main-color;
+}
+
+html {
+    scrollbar-width: thin;
+}
