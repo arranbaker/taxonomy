@@ -15,7 +15,7 @@
             border: 2px solid $main-color;
             display: grid;
             place-items: center;
-            height: 5vh;
+            height: 2rem;
             transition: 0.4s;
             
             p {
@@ -30,7 +30,7 @@
                 cursor: pointer;
                 color: $second-color;
                 background: linear-gradient(to right, transparent 50%, $main-color 50%);
-                background-size: 201% 100%;
+                background-size: 250% 100%;
                 background-position: right bottom;
                 transition: all .6s ease-out;
             }
@@ -70,49 +70,4 @@
             margin-left: 5%;
         }
     }
-
-    .miraflores-scroll-container {
-        position: sticky;
-        top: 0;
-        height: auto;
-        width: 85vw;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        justify-content: space-between;
-        padding-bottom: 10vh;
-
-        .album-image {
-            width: 40vw;
-            margin: 2.5% 0;
-        }
-
-        ul {
-            font-size: 2rem;
-            list-style-type: none;
-            font-weight: bolder;
-        }
-    }
-
-    .ecuador-video-container {
-        position: relative;
-        width: 100vw;
-        margin-left: -10%;
-        display: grid;
-        place-items: center;
-        margin-top: 10vh;
-
-        video {
-            width: 102vw;
-        }
-
-        h3 {
-            position: absolute;
-            top: 50;
-            font-size: 20rem;
-            color: transparent;
-            -webkit-text-stroke: 2px white;
-        }
-    }
 }
-

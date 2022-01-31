@@ -16,7 +16,7 @@ const Lisboa = () => {
                 <div className="album-header">
                     <Link href='/#archive'><div className="close-button-container"><p>X</p></div></Link>
                 </div>
-                <h3 className="album-title">desculpa, Lisboa</h3>
+                <h3 className="album-title">sorry, Lisbon</h3>
                 <div className="album-info">
                     <p>2018</p>
                     <p>by Arran Baker</p>

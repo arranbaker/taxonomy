@@ -5,10 +5,11 @@
     width: 100%;
     position: relative;
     z-index: 0;
-    top: 15vh;
+    padding-top: 15vh;
 
     ul {
         margin-left: 20%;
+        margin-right: 20%;
         padding-left: 0;
         border-left: 2px solid $main-color;
     }
@@ -20,12 +21,12 @@
     }
 
     .landing-circle-1 {
-        top: 0%;
+        top: 15vh;
 
     }
 
     .landing-circle-2 {
-        top: 15vw;
+        top: calc(15vh + 15vw);
     }
 
     .landing-text {
@@ -90,7 +91,7 @@
 
     h3 {
         font-size: 4rem;
-        width: 40%;
+        width: 50%;
         font-weight: lighter;
         font-family: $main-font;
         text-align: center;
@@ -104,31 +105,30 @@
         margin: 0 auto;
         width: 60%;
         padding-top: 20vh;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
 
         p {
             width: 100%;
             color: $main-color;
             font-size: 1.2rem;
             font-family: $third-font;
-        }
-
-        .details-text-2 {
-            text-align: right;
+            text-align: center;
         }
     }
 
     .archive-title {
-        font-size: 17rem;
+        font-size: 10rem;
         color: $main-color;
         padding-bottom: 2rem;
-        margin: 7rem 0 -7rem 15%;
+        margin: 7rem 0 -7rem 5%;
         text-decoration: underline;
         text-decoration-thickness: 3px;
         text-decoration-color: $second-color;
-        font-family: $second-font;
+        font-family: $main-font;
         font-weight: 500;
         letter-spacing: -5px;
+        text-underline-offset: 10px;
     }
 }
 
@@ -151,27 +151,30 @@
 
 .writing-container {
     height: auto;
-    min-height: 200vh;
+    min-height: 120vh;
     width: 100vw;
     padding-top: 2px;
     background: white;
     position: sticky;
     top: 0;
     margin-top: 150vh;
-    border-top: 2px solid $main-color;
     background: $second-color;
+    z-index: 0;
+    border-top: 2px solid $main-color;
 
     .writing-title {
-        font-size: 17rem;
+        font-size: 10rem;
         color: $main-color;
         padding-bottom: 2rem;
-        margin: 7rem 0 -7rem 15%;
+        margin: 7rem 5% -7rem 0;
+        float: right;
         text-decoration: underline;
         text-decoration-thickness: 3px;
-        text-decoration-color: $second-color;
-        font-family: $second-font;
+        text-decoration-color: $main-color;
+        font-family: $main-font;
         font-weight: 500;
         letter-spacing: -5px;
         opacity: 0;
+        text-underline-offset: 10px;
     }
 }

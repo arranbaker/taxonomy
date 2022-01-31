@@ -5,6 +5,7 @@ body {
     background: white;
     overflow-x: hidden;
     color: $main-color;
+    -webkit-font-smoothing: antialiased;
 }
 
 html {

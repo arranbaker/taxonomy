@@ -39,7 +39,7 @@ export default function Home() {
           <a><p className='landing-link' onClick={() => handleScrollTo('#archive')}>archive.</p></a>
           <a><p className='landing-link' onClick={() => handleScrollTo('#writing')}>writing.</p></a>
         </motion.ul>
-        <motion.p className='landing-text' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.5 }}>Bringing together photography from around the world.</motion.p>
+        <motion.p className='landing-text' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.5 }}>Interactive photography archive, capturing the world as it is seen.</motion.p>
         <motion.img src='img/landing1.jpg' className='landing-circle-1' initial={{ x: -400 }} animate={{ x: 0 }} transition={{ duration: 0.7 }} />
         <motion.img src='img/landing2.jpg' className='landing-circle-2' initial={{ x: -400 }} animate={{ x: 0 }} transition={{ duration: 0.7, delay: 0.1 }} />
       </motion.div>
@@ -47,10 +47,10 @@ export default function Home() {
         <motion.div className='details-container'>
           <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 2 }}>Looking at things, studying the land, the world being learnt.</motion.h3>
           <div className='details-text-container'>
-            <p>Taxonomy is an interactive space bringing together analog and digital photography.</p>
-            <p className='details-text-2'>Explore the archive below.</p>
+            <p>Taxonomy is an interactive photography archive.</p>
+            <p className='details-text-2'>From our eyes to yours.</p>
           </div>
-          <motion.h2 className='archive-title'>archive.</motion.h2>
+          <motion.h2 className='archive-title' initial={{ opacity: 1, translateX: 1200 }} animate={{ opacity: 1, translateX: -750 }} transition={{ duration: 10, repeat: Infinity, ease: 'linear' }} >	&#8595; archive &#8595;</motion.h2>
         </motion.div>
         <div className='archive-content'>
           <motion.div className="archive-container" id='archive' >

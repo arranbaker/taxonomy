@@ -16,7 +16,7 @@ export const gallerySlideData = [
     {
         url: 'img/lisboa.jpg',
         link: '/lisboa',
-        title: 'desculpa, Lisboa',
+        title: 'sorry, Lisbon',
         description: 'discover the warm and iniviting corners of lisbon.',
         id: 'slide-lisboa',
     },
