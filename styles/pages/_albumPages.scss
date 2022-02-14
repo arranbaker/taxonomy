@@ -1,5 +1,4 @@
 .album-page-container {
-    position: relative;
     background: $second-color;
     color: $main-color;
 
@@ -54,20 +53,40 @@
 
     .album-content-container {
         padding-top: 5%;
-        margin-left: 20%;
+        width: 80%;
+        margin: 0 auto;
         padding-bottom: 5vh;
-
-        .miraflores-img-1 {
-            height: 60vh;
-            margin-bottom: 0;
-        }
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
         p {
             font-size: 2.5rem;
-            margin-top: 8%;
             font-family: $main-font;
             width: 50%;
-            margin-left: 5%;
+            margin: 2em 12.5%;
         }
+
+        .album-image {
+            width: 38vw;
+            padding-bottom: 4vw;
+        }
+
+        .miraflores-img-1 {
+            height: 50vh;
+            margin-bottom: 0;
+            margin-left: 12.5%;
+        }
+    }
+
+    .album-end-message {
+        font-size: 4rem;
+        font-family: $main-font;
+        margin: 0 auto;
+        margin-top: 1em;
+        width: 100vw;
+        text-align: center;
+        padding-bottom: 1em;
     }
 }

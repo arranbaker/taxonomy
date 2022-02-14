@@ -1,18 +1,6 @@
 .miraflores-scroll-container {
-    position: sticky;
-    top: 0;
-    height: auto;
     width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
     margin: 0 auto;
-    justify-content: space-between;
-    padding-bottom: 10vh;
-
-    .album-image {
-        width: 40vw;
-        margin: 2.5% 0;
-    }
 
     ul {
         font-size: 2rem;
@@ -21,31 +9,68 @@
     }
 }
 
+.miraflores-album-title {
+    font-size: 5rem;
+    margin: 0;
+    padding: 1rem;
+    margin-left: 10%;
+}
+
+.costa-rica-album-title {
+    font-size: 5rem;
+    margin: 0;
+    margin-left: 10%;
+    padding: 0 0 2rem 0;
+}
+
 .miraflores-album-container {
     width: 80vw;
-    margin: 0 auto;
-
-    .miraflores-album-title {
-        font-size: 5rem;
-        margin: 0;
-        padding: 1rem;
-        margin-left: 10%;
-    }
+    margin:  0 auto;
 }
 
 .costa-rica-container {
-    width: auto;
+    height: auto;
+    padding-bottom: 4rem;
+}
+
+.costa-rica-scroll {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    .image-container {
+        width: 38vw;
+        height: 22.5vw;
+        position: relative;
+        padding-bottom: 4vw;
+    }
+
+    .image-filter {
+        height: 100%;
+        width: 100%;
+        background: $second-color;
+        position: absolute;
+        top: 0;
+    }
 
     .costa-rica-img {
-        padding: 1rem;
-        width: 30vw;
         transition: 0.3s;
-    }
+        height: inherit;
+        width: 38vw;;
+        position: absolute;
+        top: 0;
+    }  
 }
 
 .ecuador-container {
     width: 100vw;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
 
     .ecuador-video-container {
         position: relative;
@@ -66,5 +91,9 @@
         }
     }
 
+    img {
+        width: 35vw;
+        margin: 0 auto;
+        margin-top: 4vw;
+    }
 }
-

@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
+import gsap from "gsap/dist/gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { costaRicaImages } from "../gallerySlideData";
 
 const Miraflores = () => {
 
-    useEffect(() => {
-
-    }, [])
+    const router = useRouter()
 
     return (
         <>
@@ -19,7 +20,7 @@ const Miraflores = () => {
             <Navbar />
             <motion.div className="album-page-container" initial={{ y: 800 }} animate={{ y: 0 }} transition={{ duration: 2 }}>
                 <div className="album-header">
-                    <Link href='/#archive'><div className="close-button-container"><p>X</p></div></Link>
+                    <div className="close-button-container" onClick={() => router.back()}><p>X</p></div>
                 </div>
                 <h3 className="album-title">mira-flores</h3>
                 <div className="album-info">
@@ -30,24 +31,20 @@ const Miraflores = () => {
                     <img src='img/miraflores/miraflores-1.jpg' className="miraflores-img-1  album-image" />
                     <p>mira-flores captures the rich and etheral landscapes of central and south america.</p>
                 </div>
-                <div className="miraflores-scroll-container ">
-                    <div className="costa-rica-container miraflores-album-container">
-                        <h2 className="miraflores-album-title">Costa Rica</h2>
-                        <img src='img/miraflores/costaRica/costa-rica-1.jpg' className="costa-rica-img miraflores-image album-image" />
-                        <img src='img/miraflores/costaRica/costa-rica-2.jpg' className="costa-rica-img miraflores-image album-image" />
-                        <img src='img/miraflores/costaRica/costa-rica-3.jpg' className="costa-rica-img miraflores-image album-image" />
-                        <img src='img/miraflores/costaRica/costa-rica-4.jpg' className="costa-rica-img miraflores-image album-image" />
-                        <img src='img/miraflores/costaRica/costa-rica-5.jpg' className="costa-rica-img miraflores-image album-image" />
-                        <img src='img/miraflores/costaRica/costa-rica-6.jpg' className="costa-rica-img miraflores-image album-image" />
-                        <img src='img/miraflores/costaRica/costa-rica-7.jpg' className="costa-rica-img miraflores-image album-image" />
-                        <img src='img/miraflores/costaRica/costa-rica-8.jpg' className="costa-rica-img miraflores-image album-image" />
+                <div className="costa-rica-container">
+                    <h2 className="miraflores-album-title costa-rica-album-title">Costa Rica</h2>
+                    <div className="costa-rica-scroll">
+                        {costaRicaImages.map((i, index) => {
+                            return (
+                                <div className="image-container" key={index}>
+                                    <img src={i.url} className="costa-rica-img miraflores-image album-image" />
+                                    <motion.div className="image-filter" whileInView={{ width: '0%' }} initial={{ width: '100%' }} transition={{ duration: 0.6, delay: 0.2 }} exit={{ opacity: 0 }} viewport={{ once: true }}></motion.div>
+                                </div>
+                            )
+                        })}
                     </div>
-                    <div className="nicaragua-container miraflores-album-container">
-                        <h2 className="miraflores-album-title">Nicaragua</h2>
-                    </div>
-                    <div className="colombia-container miraflores-album-container">
-                        <h2 className="miraflores-album-title">Colombia</h2>
-                    </div>
+                </div>
+                <div className="miraflores-scroll-container">
                     <div className="ecuador-container miraflores-album-container">
                         <div className="ecuador-video-container">
                             <video autoPlay muted loop>
@@ -55,14 +52,12 @@ const Miraflores = () => {
                             </video>
                             <h3 className="text-layer">Ecuador</h3>
                         </div>
-                        <img src='/img/miraflores/2.jpg' className="miraflores-img-2 miraflores-image album-image" />
-                        <img src='img/miraflores/3.jpg' className="miraflores-img-3 miraflores-image album-image" />
-                    </div>
-                    <div className="peru-container miraflores-album-container">
-                        <h2 className="miraflores-album-title">Peru</h2>
-                        <img src='img/miraflores/4.jpg' className="miraflores-img-4 miraflores-image album-image" />
+                        <img src='/img/miraflores/ecuador/2.jpg' className="miraflores-img-2 miraflores-image album-image" />
+                        <img src='img/miraflores/ecuador/3.jpg' className="miraflores-img-3 miraflores-image album-image" />
+
                     </div>
                 </div>
+                <p className="album-end-message">End.</p>
             </motion.div >
         </>
     );

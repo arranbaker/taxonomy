@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
 import Navbar from "../components/navbar";
+import { useRouter } from "next/router";
 
 const Lisboa = () => {
+
+    const router = useRouter()
 
     return (
         <>
@@ -14,7 +17,7 @@ const Lisboa = () => {
             <Navbar />
             <motion.div className="album-page-container" initial={{ y: 800 }} animate={{ y: 0 }} transition={{ duration: 2 }} exit={{ x: -300, opacity: 0 }}>
                 <div className="album-header">
-                    <Link href='/#archive'><div className="close-button-container"><p>X</p></div></Link>
+                    <div className="close-button-container" onClick={() => router.back()}><p>X</p></div>
                 </div>
                 <h3 className="album-title">sorry, Lisbon</h3>
                 <div className="album-info">
@@ -31,6 +34,7 @@ const Lisboa = () => {
                     <img src='img/lisboa/7.jpg' className="lisboa-img-7 album-image" />
                     <img src='img/lisboa/8.jpg' className="lisboa-img-8 album-image" />
                 </div>
+                <p className="album-end-message">End.</p>
             </motion.div >
         </>
     );

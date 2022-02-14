@@ -34,6 +34,8 @@
     .about-text-container {
         margin-left: 30%;
         width: 30%;
+        border-left: 2px solid $main-color;
+        padding-left: 2em;
 
         h3 {
             font-size: 3rem;

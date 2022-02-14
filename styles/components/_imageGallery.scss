@@ -5,6 +5,7 @@
     opacity: 0;
     background: white;
     position: relative;
+    margin-left: 30vw;
 
     .gallery-line {
         width: 100vw;
@@ -12,6 +13,13 @@
         background-color: $second-color;
         position: absolute;
         top: 50%;
+    }
+
+    .gallery-date {
+        font-size: 2.5rem;
+        z-index: 0;
+        position: absolute;
+        top: 25%;
     }
 
     .gallery-container {
@@ -65,7 +73,7 @@
                 top: 50%;
                 height: fit-content;
                 font-size: 1.5rem;
-                background: white;
+                background: transparent;
                 font-family: $main-font;
 
                 &::after {
@@ -78,7 +86,7 @@
             }
 
             img {
-                height: 42vh;
+                width: 30vw;
                 z-index: 0;
                 transition: 0.4s;
                 border: 2px solid $main-color;
@@ -91,11 +99,11 @@
         }
 
         .end-gallery-slide {
-            width: 100vw;
-            padding-left: 15vw;
+            width: 00vw;
+            padding-left: 10vw;
 
             .start-end-slide-text {
-                font-size: 20rem;
+                font-size: 18rem;
                 color: $second-color;
                 margin: 0;
                 margin-top: 0;

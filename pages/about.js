@@ -12,7 +12,7 @@ const About = () => {
                 <title>About | Taxonomy</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <motion.div className="about-container" exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+            <motion.div className="about-container" exit={{ opacity: 0 }} initial={{ opacity: 0, x: 1200 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
                 <div className="about-header">
                     <div className="close-button-container"><p onClick={() => router.back()}>X</p></div>
 

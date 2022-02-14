@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Head from "next/head";
 import Navbar from "../components/navbar";
+import { useRouter } from "next/router";
 
 const Diwedd = () => {
+
+    const router = useRouter()
+
     return (
         <>
             <Head>
@@ -13,7 +16,7 @@ const Diwedd = () => {
             <Navbar />
             <motion.div className="album-page-container" initial={{ y: 800 }} animate={{ y: 0 }} transition={{ duration: 2 }} style={{ background: 'pink' }}>
                 <div className="album-header">
-                    <Link href='/#archive'><div className="close-button-container"><p>X</p></div></Link>
+                    <div className="close-button-container" onClick={() => router.back()}><p>X</p></div>
                 </div>
                 <h3 className="album-title">On the Diwedd.</h3>
                 <div className="album-info">
@@ -30,6 +33,7 @@ const Diwedd = () => {
                     <img src='img/diwedd/7.jpg' className="diwedd-img-7 album-image" />
                     <img src='img/diwedd/8.jpg' className="diwedd-img-8 album-image" />
                 </div>
+                <p className="album-end-message">End.</p>
             </motion.div >
         </>
     );
