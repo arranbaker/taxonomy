@@ -7,6 +7,12 @@
     position: relative;
     margin-left: 30vw;
 
+    @media(max-width: 850px) {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 1em;
+    }
+
     .gallery-line {
         width: 100vw;
         height: 1px;
@@ -20,6 +26,10 @@
         z-index: 0;
         position: absolute;
         top: 25%;
+
+        @media(max-width: 850px) {
+            display: none;
+        }
     }
 
     .gallery-container {
@@ -30,18 +40,29 @@
         justify-content: flex-start;
         align-items: center;
         position: relative;
+        
+        @media(max-width: 850px) {
+            flex-direction: column;
+        }
 
         .gallery-slide {
             height: 100%;
             min-width: 100%;
             display: flex;
             justify-content: center;
+
+            @media(max-width: 850px) {
+                flex-direction: column;
+            }
             
 
             .slide-info {
                 display: flex;
                 flex-direction: column;
-                
+
+                @media(max-width: 850px) {
+                    margin-left: 5%;
+                }
             }
 
             .slide-number {
@@ -49,6 +70,10 @@
                 padding: 0.5%;
                 height: 100%;
                 margin-top: -2%;
+
+                @media(max-width: 850px) {
+                    margin-left: 5%;
+                }
             }
             
             h3 {
@@ -67,7 +92,6 @@
                 background: white;
                 max-width: 16vw;
                 width: auto;
-                position: relative;
                 z-index: 20;
                 position: absolute;
                 top: 50%;
@@ -75,6 +99,12 @@
                 font-size: 1.5rem;
                 background: transparent;
                 font-family: $main-font;
+
+                @media(max-width: 850px) {
+                    position: relative;
+                    width: 90vw;
+                    max-width: 100%;
+                }
 
                 &::after {
                     content: '"';
@@ -91,6 +121,12 @@
                 transition: 0.4s;
                 border: 2px solid $main-color;
 
+                @media(max-width: 850px) {
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-bottom: 4em;
+                }
+
                 &:hover {
                     cursor: pointer;
                     transform: scale(1.1);
@@ -102,6 +138,11 @@
             width: 00vw;
             padding-left: 10vw;
 
+            @media(max-width: 850px) {
+                padding: 0;
+                margin-top: 2em;
+            }
+
             .start-end-slide-text {
                 font-size: 18rem;
                 color: $second-color;
@@ -109,6 +150,12 @@
                 margin-top: 0;
                 width: 100vw;
                 -webkit-text-stroke: $main-color;
+
+                @media(max-width: 850px) {
+                    font-size: 8rem;
+                    margin: 0 auto;
+                    text-align: center;
+                }
             }
 
             .end-slide-spacer {

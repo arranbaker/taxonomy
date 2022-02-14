@@ -13,25 +13,33 @@ const ImageGallery = () => {
 
         gsap.registerPlugin(ScrollTrigger)
 
+
+
         let sections = gsap.utils.toArray('.gallery-slide')
 
-        let scrollTrig1 = gsap.to(sections, {
-            xPercent: -100 * (sections.length - 0.5),
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.archive-container',
-                start: 'top top',
-                pin: true,
-                scrub: 0.5,
-                end: () => '+=' + document.querySelector('.gallery-container').offsetWidth
+        ScrollTrigger.matchMedia({
+            "(min-width: 850px)": function () {
+                let scrollTrig1 = gsap.to(sections, {
+                    xPercent: -100 * (sections.length - 0.5),
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '.archive-container',
+                        start: 'top top',
+                        pin: true,
+                        scrub: 0.5,
+                        end: () => '+=' + document.querySelector('.gallery-container').offsetWidth
+                    }
+                })
+
+                ScrollTrigger.refresh();
+
+                return () => {
+                    scrollTrig1.kill()
+                }
             }
         })
 
-        ScrollTrigger.refresh();
 
-        return () => {
-            scrollTrig1.kill()
-        }
     }, [])
 
     useEffect(() => {
