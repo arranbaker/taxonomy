@@ -25,11 +25,10 @@
             height: 60vh;
             width: 60vh;
             border: 1px solid $second-color;
-            border-radius: 50%;
             display: inline-block;
             position: absolute;
             bottom: 0vh;
-            left: -30vh;
+            left: -40vh;
         }
 
         @media(max-width: 850px) {
@@ -303,7 +302,7 @@
         width: 35%;
         margin-left: 20%;
         padding-left: 5%;
-        margin-top: 150vh;
+        margin-top: 90vh;
         height: 130vh;
         border-left: 2px solid $main-color;
         border-top: 2px solid $main-color;

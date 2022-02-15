@@ -102,4 +102,29 @@
             }
         }
     }
+
+    .contact-sent-message {
+        width: fit-content;
+        margin: 0 auto;
+        margin-left: 30%;
+        background: $main-color;
+        font-size: 0.9rem;
+        color: $second-color;
+        border-radius: 20px;
+        padding: 0.5rem 2rem;
+        font-family: $main-font;
+
+        button {
+            background: $main-color;
+            color: $second-color;
+            border: none;
+            margin-left: 1em;
+            font-size: 0.8rem;
+            font-family: $main-font;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 }

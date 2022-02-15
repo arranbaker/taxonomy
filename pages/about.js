@@ -19,7 +19,7 @@ const About = () => {
                 </div>
                 <div className="about-text-container">
                     <h3>About.</h3>
-                    <p>Taxonomy is an image archive, bringing togehter analog photography from contributing photographers.</p>
+                    <p>Taxonomy has been put together but select photographers, we are based in the UK.</p>
                 </div>
             </motion.div>
         </>
