@@ -42,13 +42,15 @@ const ImageGallery = () => {
     useEffect(() => {
         const onScroll = () => {
 
-            let scrollPercentage = (window.pageYOffset / document.body.offsetHeight) * 100
+            let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100
 
-            if (scrollPercentage < 44) {
+            console.log(scrollPercentage)
+
+            if (scrollPercentage < 55) {
                 setGalleryDate(2019)
-            } if (scrollPercentage > 44) {
+            } if (scrollPercentage > 55) {
                 setGalleryDate(2018)
-            } if (scrollPercentage > 52) {
+            } if (scrollPercentage > 65) {
                 setGalleryDate(2017)
             }
         }

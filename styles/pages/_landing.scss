@@ -1,12 +1,14 @@
 .landing-container {
     background-color: white;
     background-position: center;
-    height: 75vh;
+    height: calc(100vh - 6em);
     width: 100%;
     position: relative;
     z-index: 0;
-    padding-top: 15vh;
-    margin-bottom: 15vh;
+    padding-top: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @media(max-width: 850px) {
         height: auto;
@@ -27,7 +29,7 @@
             border: 1px solid $second-color;
             display: inline-block;
             position: absolute;
-            bottom: 0vh;
+            bottom: -2vh;
             left: -40vh;
         }
 
@@ -47,7 +49,7 @@
         display: inline-block;
         position: absolute;
         right: 5vw;
-        bottom: 2vw;
+        bottom: 4em;
         margin-right: 2vw;
 
         @media(max-width: 850px) {
@@ -60,7 +62,7 @@
     }
 
     .landing-circle-1 {
-        bottom: 2vw;
+        bottom: 10vh;
 
         @media(max-width: 850px) {
            top: 0;
@@ -69,7 +71,7 @@
     }
 
     .landing-circle-2 {
-        bottom: calc(2vw + 35vh);
+        bottom: calc(10vh + 37vh);
     }
 
     .landing-text {
@@ -102,11 +104,13 @@
     }
 
     .landing-scroll-message {
-        margin-top: 2em;
+        margin: 0;
+        margin-top: 8em;
         margin-left: 20%;
         font-size: 1rem;
-        position: absolute;
-        bottom: 0;
+        position: relative;
+        width: fit-content;
+        bottom: 6em;
         left: 0;
         background: $main-color;
         color: white;
@@ -132,9 +136,9 @@
 }
 
 .details-container {
-    padding-top: 20vh;
+    padding-top: 10em;
     background: white;
-    min-height: 100vh;
+    height: auto;
     position: relative;
     z-index: 10;
     width: 100vw;
@@ -155,7 +159,7 @@
         margin: 0 auto;
         color: white;
         opacity: 0;
-        padding: 5% 10%;
+        padding: 2em 10%;
         background-image: url(../../public/img/landing.png);
         border: 2px solid $main-color;
         border: 2px solid lighten(white, 10%);
@@ -169,7 +173,7 @@
         display: flex;
         margin: 0 auto;
         width: 60%;
-        padding-top: 20vh;
+        padding-top: 10em;
         flex-direction: column;
         align-items: center;
 
@@ -230,7 +234,7 @@
 }
 
 .archive-content {
-    min-height: 100vh;
+    height: auto;
     width: 100%;
     background: white;
 
@@ -255,13 +259,12 @@
     }
 
     @media (min-height: 800px) and (min-width: 850px) {
-        margin-bottom: -30vh;
+        margin-bottom: -15em;
     }
 }
 
 .credits-container {
     height: auto;
-    min-height: 120vh;
     width: 100vw;
     padding-top: 2px;
     background: white;
@@ -300,14 +303,15 @@
     .credits-scroll-container {
         position: relative;
         width: 35%;
-        margin-left: 20%;
+        margin-left: 15%;
         padding-left: 5%;
-        margin-top: 90vh;
-        height: 130vh;
+        margin-top: 40em;
+        height: auto;
         border-left: 2px solid $main-color;
         border-top: 2px solid $main-color;
         border-right: 2px solid $main-color;
         background: darken($second-color, 5%);
+        padding-bottom: 10em;
 
         @media(max-width: 850px) {
             width: 80%;
@@ -347,7 +351,7 @@
         }
 
         .credits-made-by {
-            margin-top: 30vh;
+            margin-top: 5em;
 
             @media(max-width: 850px) {
                 margin-top: 4em;
@@ -379,7 +383,7 @@
             height: 2rem;
             transition: 0.8s;
             width: fit-content;
-            margin-top: 20vh;
+            margin-top: 7em;
             
             p {
                 font-weight: bold;
