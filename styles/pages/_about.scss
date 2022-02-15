@@ -5,6 +5,12 @@
         width: 30%;
         display: flex;
         align-items: flex-end;
+
+        @media (max-width: 850px) {
+            width: 90vw;
+            margin-left: 5%;
+            margin-top: 25vh;
+        }        
     }
 
     .close-button-container {
@@ -36,6 +42,12 @@
         width: 30%;
         border-left: 2px solid $main-color;
         padding-left: 2em;
+
+        @media (max-width: 850px) {
+            width: 90vw;
+            margin-left: 5%;
+            margin-top: 10vh;
+        }
 
         h3 {
             font-size: 3rem;

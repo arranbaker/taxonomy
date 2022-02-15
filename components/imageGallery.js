@@ -13,8 +13,6 @@ const ImageGallery = () => {
 
         gsap.registerPlugin(ScrollTrigger)
 
-
-
         let sections = gsap.utils.toArray('.gallery-slide')
 
         ScrollTrigger.matchMedia({
@@ -38,7 +36,6 @@ const ImageGallery = () => {
                 }
             }
         })
-
 
     }, [])
 

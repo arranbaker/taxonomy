@@ -1,7 +1,9 @@
 import { gallerySlideData } from "../gallerySlideData";
 import Link from "next/link";
+import { useEffect } from "react/cjs/react.production.min";
 
 const GallerySlides = () => {
+
     return (
         <>
             {gallerySlideData.map((slide, slideIndex) => {
@@ -12,7 +14,7 @@ const GallerySlides = () => {
                             <Link href={slide.link}><h3>{slide.title}</h3></Link>
                             <h2 className="slide-descriptions">{slide.description}</h2>
                         </div>
-                        <Link href={slide.link}><img src={slide.url} /></Link>
+                        <Link href={slide.link}><img src={slide.url} className='gallery-image' /></Link>
                     </div>
                 )
             })

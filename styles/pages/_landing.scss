@@ -1,7 +1,7 @@
 .landing-container {
     background-color: white;
     background-position: center;
-    height: 70vh;
+    height: 75vh;
     width: 100%;
     position: relative;
     z-index: 0;
@@ -11,6 +11,7 @@
     @media(max-width: 850px) {
         height: auto;
         margin-bottom: 2em;
+        padding-top: 10vh;
     } 
 
     ul {
@@ -36,24 +37,31 @@
                 width: 0;
                 height: 0;
             }
+
+            margin-bottom: 2em;
+            margin-left: 5%;
         } 
     }
 
     img {
         height: 35vh;
+        display: inline-block;
         position: absolute;
-        right: 20%;
+        right: 5vw;
+        bottom: 2vw;
+        margin-right: 2vw;
 
         @media(max-width: 850px) {
             position: initial;
             margin: 0 auto;
             display: block;
             margin-top: 2em;
-        } 
+        }
+
     }
 
     .landing-circle-1 {
-        top: 15vh;
+        bottom: 2vw;
 
         @media(max-width: 850px) {
            top: 0;
@@ -62,7 +70,7 @@
     }
 
     .landing-circle-2 {
-        top: calc(15vh + 35vh);
+        bottom: calc(2vw + 35vh);
     }
 
     .landing-text {
@@ -77,12 +85,13 @@
             font-size: 1.5rem;
             width: 90%;
             margin: 0 auto;
+            margin-bottom: 2em;
         } 
     }
 
     .landing-link {
         font-family: $third-font;
-        font-size: 5rem;
+        font-size: 4.5rem;
         width: fit-content;
         padding-left: 1rem;
         margin: 0;
@@ -222,28 +231,32 @@
 }
 
 .archive-content {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: white;
-    padding-bottom: 0;
 
     @media(max-width: 850px) {
-        height: 110vh;
+        height: auto;
     }
 }
 
 .archive-container {
-    height: 90vh;
+    height: auto;
     width: 100%;
     background: white;
     padding-top: 10vh;
-    padding-bottom: 50vh;
+    margin-bottom: -50vh;
     position: sticky;
     top: 0;
 
     @media(max-width: 850px) {
         height: auto;
         padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    @media (min-height: 800px) and (min-width: 850px) {
+        margin-bottom: -30vh;
     }
 }
 
@@ -255,13 +268,12 @@
     background: white;
     position: sticky;
     top: 0;
-    margin-top: 150vh;
     background: $second-color;
     z-index: 0;
     border-top: 2px solid $main-color;
 
     @media(max-width: 850px) {
-        margin-top: 90vh;
+        margin-top: 2em;
     }
 
     .credits-title {
@@ -281,15 +293,17 @@
         @media(max-width: 850px) {
             font-size: 5rem;
             margin-top: 0.5em;
+            position: relative;
+            top: 0;
         }
     }
 
     .credits-scroll-container {
         position: relative;
-        width: 30%;
+        width: 35%;
         margin-left: 20%;
-        padding-left: 10%;
-        margin-top: 110vh;
+        padding-left: 5%;
+        margin-top: 150vh;
         height: 130vh;
         border-left: 2px solid $main-color;
         border-top: 2px solid $main-color;
@@ -301,6 +315,12 @@
             margin: 0 auto;
             margin-top: 10em;
             height: 100vh;
+        }
+
+        @media (max-width: 950px) {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 12em;
         }
 
         h3 {
@@ -359,7 +379,7 @@
             place-items: center;
             height: 2rem;
             transition: 0.8s;
-            width: 50%;
+            width: fit-content;
             margin-top: 20vh;
             
             p {
@@ -382,8 +402,3 @@
     }
 }
 
-@media (min-height: 900px) and (min-width: 850px) {
-    .credits-container {
-        margin-top: -40vh;
-    }
-}

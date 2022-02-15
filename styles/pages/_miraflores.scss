@@ -21,6 +21,10 @@
     margin: 0;
     margin-left: 10%;
     padding: 0 0 2rem 0;
+
+    @media (max-width: 850px) {
+        font-size: 3rem;
+    }
 }
 
 .miraflores-album-container {
@@ -31,6 +35,10 @@
 .costa-rica-container {
     height: auto;
     padding-bottom: 4rem;
+
+    @media (max-width: 850px) {
+        padding-bottom: 2em;
+    }
 }
 
 .costa-rica-scroll {
@@ -41,11 +49,22 @@
     margin: 0 auto;
     flex-wrap: wrap;
 
+    @media (max-width: 850px) {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
     .image-container {
         width: 38vw;
         height: 22.5vw;
         position: relative;
         padding-bottom: 4vw;
+
+        @media (max-width: 850px) {
+            width: 90vw;
+            height: auto;
+            margin: 0 auto;
+        }
     }
 
     .image-filter {
@@ -54,6 +73,12 @@
         background: $second-color;
         position: absolute;
         top: 0;
+
+        @media (max-width: 850px) {
+            width: 90vw;
+            margin: 0 auto;
+            position: relative;
+        }
     }
 
     .costa-rica-img {
@@ -62,6 +87,12 @@
         width: 38vw;;
         position: absolute;
         top: 0;
+
+        @media (max-width: 850px) {
+            width: 90vw;
+            margin: 0 auto;
+            position: relative;
+        }
     }  
 }
 
@@ -78,6 +109,10 @@
         display: grid;
         place-items: center;
         margin-top: 10vh;
+
+        @media (max-width: 850px) {
+            margin-top: 1em;
+        }
     
         video {
             width: 100%;
@@ -88,6 +123,10 @@
             margin: 0 auto;
             font-size: 12rem;
             color: $second-color;
+
+            @media (max-width: 850px) {
+               font-size: 5rem;
+            }
         }
     }
 
@@ -95,5 +134,11 @@
         width: 35vw;
         margin: 0 auto;
         margin-top: 4vw;
+
+        @media (max-width: 850px) {
+            width: 90vw;
+            margin: 0 auto;
+            margin-top: 2em;;
+        }
     }
 }
