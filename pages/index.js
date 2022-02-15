@@ -52,7 +52,6 @@ export default function Home() {
         <motion.h2 className='archive-title'>archive .</motion.h2>
       </motion.div>
       <div className='archive-content'>
-        <div className="gallery-sqaure"></div>
         <motion.div className="archive-container" id='archive' >
           <ImageGallery />
         </motion.div>

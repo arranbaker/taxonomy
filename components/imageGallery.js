@@ -22,7 +22,7 @@ const ImageGallery = () => {
                     ease: 'none',
                     scrollTrigger: {
                         trigger: '.archive-container',
-                        start: 'top top',
+                        start: 'top',
                         pin: true,
                         scrub: 0.5,
                         end: () => '+=' + document.querySelector('.gallery-container').offsetWidth
